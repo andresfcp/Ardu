@@ -13,7 +13,6 @@ const int MotorIzquierdoAdelante = 5; //In4 del L298
 const int MotorIzquierdoReversa = 4;  //In3 del L298
 const int MotorDerechoAdelante = 3;   //In2 del L298
 const int MotorDerechoReversa = 2;    //In1 del L298
-//const int servoPin = 11;
 
 //Pines del sensor HC-SR04
 #define trigPin A1
@@ -26,7 +25,7 @@ const int MotorDerechoReversa = 2;    //In1 del L298
 
 #define servoPin 11 // Pin del servo
 
-#define distanciaMaxima 200 //distancia máxima a la que va a rivsar el sensor
+#define distanciaMaxima 200 //distancia máxima a la que va a reivsar el sensor
 
 int izq;
 int der;
@@ -94,7 +93,7 @@ void loop()
      * 
      * if(distanceRight > distanceLeft ){}
         */
-    if (distancia >= distanceLeft)
+    if (distanceRight > distanceLeft)
     {
       turnRight();
       moveStop();
